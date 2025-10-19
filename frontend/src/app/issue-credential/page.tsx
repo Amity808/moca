@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { useAirKit } from '@/components/AirKitProvider';
 
 interface CredentialResult {
-    id: string;
-    status: string;
-    credential: string;
+    id?: string;
+    status?: string;
+    credential?: string;
+    [key: string]: unknown;
 }
 
-interface CredentialSubject {
+interface CredentialSubject extends Record<string, unknown> {
     "@context": Array<{
         "@version": number;
         "@protected": boolean;
@@ -156,7 +157,12 @@ export default function FanCredentialIssuer() {
             });
 
             console.log("Credential issued successfully:", result);
-            setCredentialResult(result);
+            // Since issueCredential returns void, we'll create a success result
+            setCredentialResult({
+                id: "credential-issued",
+                status: "success",
+                credential: "Credential issued successfully"
+            });
         } catch (error: unknown) {
             console.error("Failed to issue credential:", error);
             console.log(error, "insurance")

@@ -369,8 +369,3 @@ export const FanScore = ({ score, size = 'md', showLabel = true, className = '' 
     );
 };
 
-// Export all components
-export {
-    colors,
-    typography
-};

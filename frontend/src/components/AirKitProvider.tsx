@@ -15,7 +15,7 @@ interface AirKitContextType {
 
 interface LoginResult {
     id: string;
-    abstractAccountAddress: string;
+    abstractAccountAddress?: string;
     token: string;
     isLoggedIn: boolean;
     isMFASetup?: boolean;
@@ -72,7 +72,7 @@ export const AirKitProvider = ({ children }: AirKitProviderProps) => {
         try {
             const result = await service.login({});
             setIsLoggedIn(true);
-            setLoginResult(result);
+            setLoginResult(result as LoginResult);
             if (result?.abstractAccountAddress) {
                 setUserAddress(result.abstractAccountAddress);
             }
