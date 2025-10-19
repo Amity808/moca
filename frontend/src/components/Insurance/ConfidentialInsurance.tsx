@@ -479,7 +479,7 @@ MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC...
           {credentialFields.length === 0 ? (
             <div className="text-center py-8 text-gray-500">
               <p>No credential fields added yet.</p>
-              <p className="text-sm">Click "Add Field" to start building your credential subject.</p>
+              <p className="text-sm">Click &ldquo;Add Field&rdquo; to start building your credential subject.</p>
             </div>
           ) : (
             <div className="space-y-4">
@@ -578,7 +578,7 @@ MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC...
           <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
             <h4 className="text-sm font-medium text-yellow-800 mb-2">Requirements to enable issuance:</h4>
             <ul className="text-xs text-yellow-700 space-y-1">
-              {!isLoggedIn && <li>• Please log in using the "Connect Wallet" button in the header</li>}
+              {!isLoggedIn && <li>• Please log in using the &ldquo;Connect Wallet&rdquo; button in the header</li>}
               {!generatedJwt && <li>• Please generate a JWT token in the Authentication section</li>}
               {!config.issuerDid && <li>• Please set the Issuer DID in the Configuration section</li>}
               {!config.credentialId && <li>• Please set the Credential ID in the Configuration section</li>}
@@ -627,9 +627,9 @@ MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC...
           <ul className="text-xs sm:text-sm text-blue-800 space-y-1">
             <li>• Need to whitelist the cross partner domain in Airkit </li>
             <li>• Configure the issuer DID, API key, and credential ID</li>
-            <li>• Add credential subject fields using the "Add Field" button</li>
+            <li>• Add credential subject fields using the &ldquo;Add Field&rdquo; button</li>
             <li>• Set field name, type (string, number, boolean, date), and value</li>
-            <li>• Click "Start Credential Issuance Widget" to start the process</li>
+            <li>• Click &ldquo;Start Credential Issuance Widget&rdquo; to start the process</li>
             <li>• The widget will handle the credential issuance flow</li>
           </ul>
         </div>

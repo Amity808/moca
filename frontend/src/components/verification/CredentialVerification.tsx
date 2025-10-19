@@ -433,7 +433,7 @@ const CredentialVerification = ({
                         <li>• Configure the verifier API key and program ID</li>
                         <li>• Set the partner id</li>
                         <li>• Set the redirect URL for issuer if required</li>
-                        <li>• Click "Start Credential Verification Widget" to start the process</li>
+                        <li>• Click &ldquo;Start Credential Verification Widget&rdquo; to start the process</li>
                         <li>• The widget will handle the credential verification flow</li>
                         <li>• Review the verification results after completion</li>
                     </ul>
